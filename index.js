@@ -231,16 +231,17 @@ app.get('/get/message/:id', jwtMiddleWare, async (req, res) => {
             } 
         },
         {
-            $sort: {
-                "currentUser.timeNumber": -1
-            }
-        },
-        {
             $project: {
                 userName: '$currentUser.userName',
                 avatar: '$currentUser.avatar',
                 timeStamp: '$timeStamp',
-                message: '$message'
+                message: '$message',
+                timeNumber: '$timeNumber'
+            }
+        },
+        {
+            $sort: {
+                'timeNumber': -1
             }
         }
     ])
@@ -250,5 +251,55 @@ app.get('/get/message/:id', jwtMiddleWare, async (req, res) => {
         message
     })
 })
+
+//! DEV MODE
+
+// app.get('/get/channels/ezMode',async (req, res) => {
+//     const channels = await channelModal.find()
+//     res.status(200).json({
+//         channels
+//     })
+// })
+
+// app.get('/get/messages',async (req, res) => {
+//     const channel = req.body.channel
+//     const messages = await messageModal.aggregate([
+//         {
+//             $match: { channel: mongoose.Types.ObjectId(channel) }
+//         },
+//         {
+//             $lookup: {
+//                 from: 'users',
+//                 localField: 'user',
+//                 foreignField: '_id',
+//                 as: 'currentUser',
+//             },
+//         },
+//         {
+//             $unwind: {
+//                 path: '$currentUser',
+//                 preserveNullAndEmptyArrays: true
+//             } 
+//         },
+//         {
+//             $project: {
+//                 userName: '$currentUser.userName',
+//                 avatar: '$currentUser.avatar',
+//                 timeStamp: '$timeStamp',
+//                 message: '$message',
+//                 timeNumber: '$timeNumber'
+//             }
+//         },
+//         {
+//             $sort: {
+//                 'timeNumber': -1
+//             }
+//         }
+//     ])
+
+//     res.status(200).json({
+//         messages
+//     })
+// })
 
 app.listen(port , () => console.log(`Listening to port: ${port}`))

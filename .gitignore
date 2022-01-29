@@ -37,3 +37,5 @@ ehthumbs.db
 Thumbs.db
 
 node_modules/
+
+# mongodb+srv://moum:Mbou1999@cluster0.vhzru.mongodb.net/myFirstDatabase?retryWrites=true&w=majority #s
