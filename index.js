@@ -161,16 +161,17 @@ app.get('/channel/:id', jwtMiddleWare, async (req, res) => {
             } 
         },
         {
-            $sort: {
-                "currentUser.timeNumber": -1
-            }
-        },
-        {
             $project: {
                 userName: '$currentUser.userName',
                 avatar: '$currentUser.avatar',
                 timeStamp: '$timeStamp',
-                message: '$message'
+                message: '$message',
+                timeNumber: '$timeNumber'
+            }
+        },
+        {
+            $sort: {
+                "timeNumber": -1
             }
         }
     ])
