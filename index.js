@@ -26,7 +26,7 @@ const port = process.env.PORT || 5000
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect(process.env.DB)
+mongoose.connect(process.env.DB || 'mongodb+srv://moum:Mbou1999@cluster0.vhzru.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
 mongoose.connection.once('open', () => {
     console.log('connection DB successfull !')
