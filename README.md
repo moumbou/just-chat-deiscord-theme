@@ -1,4 +1,4 @@
-# just-chat-backend
+# just-chat (discord theme)
 ![image](https://user-images.githubusercontent.com/60050570/209567704-2f5b70db-cca6-4ec9-8835-4024f7246698.png)
 
 ### View a [live demo here.](https://just-chat-da4a1.web.app/)
