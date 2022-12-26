@@ -1,2 +1,15 @@
 # just-chat-backend
-![image](https://user-images.githubusercontent.com/60050570/209567252-4421cedc-1b47-463d-998d-853b57484611.png)
+![image](https://user-images.githubusercontent.com/60050570/209567704-2f5b70db-cca6-4ec9-8835-4024f7246698.png)
+
+### View a [live demo here.](https://just-chat-da4a1.web.app/)
+
+## Description
+This is react chat app you can create an account and chat that's it !.
+
+## Installation
+### 1. Fork and download this repo (and star if you like!)
+you can download this repo or just clone it `git clone https://github.com/moumbou/just-chat-backend.git`
+### 2. Install dependencies
+cd to the folder repo and run the commande `npm i` or `npm install`.
+### 3. Make any other changes you like
+after you've done the installation dependencies work around with the code and make it your own !.
