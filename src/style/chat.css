@@ -1,0 +1,138 @@
+.channels {
+    display: grid;
+    grid-template-rows: 70px calc(100% - (70px + 70px));
+    flex-direction: column;
+    flex: .85;
+    background-color: var(--bg-dark-50);
+    height: 100%;
+    box-shadow: 3px 0 3px rgba(0, 0, 0, .5) inset;
+}
+
+.header_channel {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+.chat_name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--bg-white);
+    font-weight: bolder;
+    font-family: 'Staatliches';
+    letter-spacing: 2px;
+}
+
+.chat_channel {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10px;
+    overflow: auto;
+}
+
+.chat_channel::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat_channel::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--bg-dark-40);
+}
+
+.chat_channel::-webkit-scrollbar-thumb {
+    background: var(--bg-dark-30);
+    opacity: .3;
+    border-radius: 10px;
+}
+
+.chat_channel::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-dark-60);
+    opacity: 1;
+}
+
+.message_container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+    height: max-content;
+    padding: 10px 0;
+}
+
+.message_content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.message_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.timestamp {
+    text-align: center;
+    color: var(--bg-dark-30);
+}
+
+.user_info {
+    color: var(--bg-white);
+    font-weight: bolder;
+}
+
+.message {
+    color: var(--bg-white);
+}
+
+.form_channel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    height: 70px;
+    background-color: var(--bg-dark-60);
+}
+
+.form_channel form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px calc(100% - 75px) 35px;
+    align-items: center;
+    gap: 10px;
+}
+
+.form_channel form button {
+    display: none;
+}
+
+.form_channel input {
+    background: var(--bg-dark-50);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+    color: var(--bg-white);
+}
+
+.submit_button {
+    color: var(--bg-white);
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    color: var(--bg-dark-50);
+}
+
+.delete_message {
+    color: var(--bg-dark-30);
+    cursor: pointer;
+}
+
+.delete_message:hover {
+    color: var(--bg-warning);
+}

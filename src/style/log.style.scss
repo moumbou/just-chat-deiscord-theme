@@ -1,0 +1,124 @@
+.log_div {
+    position: relative;
+    z-index: 9999;
+    background-color: var(--bg-white);
+    border-radius: 3px;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: .9);
+}
+
+.log_header {
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Staatliches';
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.log_header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid var(--bg-dark-30);
+}
+
+.log_body {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.log_body a {
+    text-decoration: none;
+    font-size: .7rem;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--bg-dark-40);
+}
+
+.log_body a:hover {
+    color: var(--bg-primary);
+}
+
+.input_groupe {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input_groupe input {
+    border: 2px solid var(--bg-neutral-60);
+    outline: none;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 700;
+    color: var(--bg-dark-50);
+    transition: border .5s ease-in-out;
+}
+
+.input_groupe input:focus {
+    border: 2px solid var(--bg-primary) !important;
+}
+
+.valid_input {
+    border: 2px solid var(--bg-primary) !important;
+}
+
+.valid_input_label {
+    color: var(--bg-primary) !important;
+}
+
+
+.input_groupe label {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    background-color: var(--bg-white);
+    padding: 0 3px;
+    font-size: .8rem;
+    font-weight: bolder;
+    transform: translateY(-50%);
+    color: var(--bg-dark-30);
+    pointer-events: none;
+    transition: color .5s ease-in-out;
+}
+
+.log_button {
+    width: 100%;
+    background-color: var(--bg-primary) !important;
+    color: var(--bg-white) !important;
+    font-weight: bolder !important;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px !important;
+}
+
+.avatar_section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
+.avatar_picker {
+    cursor: pointer;
+    background-color: var(--bg-dark-60);
+    transition: border .5s ease-in-out;
+}
+
+.avatar_picker:hover {
+    border: 1px solid var(--bg-primary);
+}

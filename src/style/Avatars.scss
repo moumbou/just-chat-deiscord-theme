@@ -1,0 +1,39 @@
+.avatars_box {
+    position: relative;
+}
+
+.avatars_container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    top: 50%;
+    left: calc(100% + 16px);
+    padding: 10px;
+    background-color: var(--bg-dark-50);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    z-index: 100;
+}
+
+.avatars_container::after {
+    content: '';
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    background-color: var(--bg-dark-50);
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translateX(-100%);
+    width: 15px;
+    height: 15px;
+}
+
+.avatar_profile {
+    cursor: pointer;
+    background-color: var(--bg-dark-60);
+}
+
+.avatar_profile:hover {
+    border: 1px solid var(--bg-success);
+}

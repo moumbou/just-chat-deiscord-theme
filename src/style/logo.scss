@@ -1,0 +1,62 @@
+.logo_big_cat img {
+    height: 60px;
+    z-index: 9999;
+    position: relative;
+}
+
+.logo_big_cat {
+    position: relative;
+    background-color: var(--bg-dark-60);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+}
+
+.logo_big_cat::before {
+    content: '';
+    background-image: url('../Imgs/Logo/me.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(95%);
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+    z-index: 10;
+    clip-path: circle(0.0% at 50% 50%);
+    transition: all .5s ease-in-out;
+}
+
+.logo_big_cat::after {
+    content: 'go to my portfolio >';
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    top: 50%;
+    left: 190%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: max-content;
+    font-weight: bolder;
+    font-size: .7rem;
+    color: var(--bg-primary);
+    opacity: 0;
+}
+
+.logo_big_cat:hover {
+    cursor: pointer;
+}
+
+.logo_big_cat:hover::before {
+    clip-path: circle(50.0% at 50% 50%);
+}
+
+.logo_big_cat:hover::after {
+    opacity: 1;
+    transition: opacity .5s .5s ease-in-out;
+}

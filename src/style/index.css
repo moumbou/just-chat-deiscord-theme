@@ -1,0 +1,51 @@
+:root {
+  --bg-dark-60: #212224;
+  --bg-dark-50: #393B3F;
+  --bg-dark-40: #60636A;
+  --bg-dark-30: #A4A8AE;
+  --bg-white: #F2F3F5;
+  --bg-success: #36B368;
+  --bg-warning: #EA5230;
+  --bg-primary: #007BFF;
+  --bg-neutral-50: #F2F3F5;
+  --bg-neutral-60: #D5D8DF;
+}
+
+@font-face {
+  font-family: "Staatliches";
+  src: local("Staatliches-Regular"),
+  url("../Fonts/Staatliches-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Smooch";
+  src: local("Smooch-Regular"),
+  url("../Fonts/Smooch-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+.add_room_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.add_room_modal_show {
+    animation: show 1s ease-in-out forwards;
+}
+
+@keyframes show{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.add_room_modal_content {
+    height: max-content;
+    padding-bottom: 10px;
+    width: 400px;
+    border-radius: 5px;
+    background: var(--bg-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.add_room_modal_content_title {
+    width: 100%;
+    padding: 10px;
+    color: var(--bg-dark-60);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: 'Staatliches';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--bg-dark-30);
+}
+
+.add_room_modal_content_body {
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.add_room_modal_content_body input {
+    outline: none;
+    width: 100%;
+    background-color: var(--bg-dark-30);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: var(--bg-dark-50);
+    font-weight: bolder;
+}
+
+.add_room_modal_content_body button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--bg-white);
+    background: rgb(54,179,104);
+    /* background: linear-gradient(90deg, rgba(54,179,104,1) 0%, rgba(0,123,255,1) 100%); */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    font-size: .9rem;
+    font-family: 'Staatliches';
+    letter-spacing: 1px;
+    -webkit-transition: background .5s ease-out;
+    -moz-transition: background .5s ease-out;
+    -o-transition: background .5s ease-out;
+    transition: background .5s ease-out;
+}
+
+.add_room_modal_content_body button:hover {
+    background: rgb(0,123,255);
+    /* background: linear-gradient(90deg, rgba(0,123,255,1) 0%, rgba(54,179,104,1) 100%); */
+}
