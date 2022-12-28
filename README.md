@@ -1,5 +1,7 @@
 # just-chat (discord theme)
 ![image](https://user-images.githubusercontent.com/60050570/209567704-2f5b70db-cca6-4ec9-8835-4024f7246698.png)
+![chat](https://user-images.githubusercontent.com/60050570/209821079-23ec644b-64b2-4f14-9fc5-1263870da36a.PNG)
+
 
 ### View a [live demo here.](https://just-chat-da4a1.web.app/)
 
